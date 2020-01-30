@@ -6,9 +6,12 @@
 #    By: bdekonin <bdekonin@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2019/10/29 12:24:22 by bdekonin       #+#    #+#                 #
-#    Updated: 2019/11/30 15:50:40 by bdekonin      ########   odam.nl          #
+#    Updated: 2020/01/30 11:01:57 by bdekonin      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
+
+NOCOLOR = \033[0m
+GREEN = \033[92m
 
 NAME = libft.a
 
@@ -38,7 +41,7 @@ all: $(NAME)
 
 $(NAME): $(OFILES) $(INCLUDES)
 	@ar rcs $(NAME) $?
-	@echo "\033[92mCreated a Library and Object Files.\033[0m"
+	@echo "$(GREEN)[libft] - Created a Library and Object Files.$(NOCOLOR)"
 
 bonus: $(NAME) $(BONUS_OFILES) $(BONUS_SRC)
 	@touch bonus
@@ -51,10 +54,10 @@ clean:
 	@/bin/rm -f $(BONUS_OFILES)
 	@/bin/rm -f a.out
 	@/bin/rm -f bonus
-	@echo "\033[92mRemoved All Object Files.\033[0m"
+	@echo "$(GREEN)[libft] - Removed All Object Files.$(NOCOLOR)"
 
 fclean:    clean
 	@/bin/rm -f $(NAME)
-	@echo "\033[92mRemoved .a file and all .o files.\033[0m"
+	@echo "$(GREEN)[libft] - Removed .a file and all .o files.$(NOCOLOR)"
 
 re: fclean all
