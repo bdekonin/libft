@@ -5,8 +5,8 @@
 #                                                      +:+                     #
 #    By: bdekonin <bdekonin@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
-#    Created: 2019/10/29 12:24:22 by bdekonin       #+#    #+#                 #
-#    Updated: 2020/01/30 11:01:57 by bdekonin      ########   odam.nl          #
+#    Created: 2019/10/29 12:24:22 by bdekonin      #+#    #+#                  #
+#    Updated: 2020/04/10 20:51:46 by bdekonin      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,8 @@ OFILES = $(SRCS:.c=.o)
 BONUS_SRC = $(SRCS) ft_lstadd_back_bonus.c ft_lstadd_front_bonus.c \
 ft_lstlast_bonus.c ft_lstnew_bonus.c ft_lstsize_bonus.c \
 ft_lstdelone_bonus.c ft_lstiter_bonus.c ft_lstclear_bonus.c \
-ft_lstmap_bonus.c
+ft_lstmap_bonus.c ft_swap_bonus.c ft_strsearch_bonus.c \
+ft_charsearch_bonus.c ft_counter_bonus.c
 
 BONUS_OFILES = $(OFILES) $(BONUS_SRC:.c=.o)
 

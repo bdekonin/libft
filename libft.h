@@ -5,8 +5,8 @@
 /*                                                     +:+                    */
 /*   By: bdekonin <bdekonin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/05 08:07:31 by bdekonin       #+#    #+#                */
-/*   Updated: 2019/11/30 15:50:57 by bdekonin      ########   odam.nl         */
+/*   Created: 2019/11/05 08:07:31 by bdekonin      #+#    #+#                 */
+/*   Updated: 2020/04/10 20:48:35 by bdekonin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,7 @@ char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				**ft_split(char const *s, char c);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				*ft_strtrim(char const *s1, char const *set);
+int					ft_counter(const char *s, char c);
 
 /*
 ** Datatype Conversions
@@ -100,5 +101,8 @@ void				ft_lstiter(t_list *lst, void (*f)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void*));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *), \
 void (*del)(void *));
+void				ft_swap(double *xp, double *yp);
+int					ft_strsearch(char *line, char *str);
+int					ft_charsearch(char c, char *str);
 
 #endif
