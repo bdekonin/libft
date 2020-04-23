@@ -6,7 +6,7 @@
 #    By: bdekonin <bdekonin@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2019/10/29 12:24:22 by bdekonin      #+#    #+#                  #
-#    Updated: 2020/04/10 20:51:46 by bdekonin      ########   odam.nl          #
+#    Updated: 2020/04/23 11:07:20 by bdekonin      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,10 +31,13 @@ OFILES = $(SRCS:.c=.o)
 BONUS_SRC = $(SRCS) ft_lstadd_back_bonus.c ft_lstadd_front_bonus.c \
 ft_lstlast_bonus.c ft_lstnew_bonus.c ft_lstsize_bonus.c \
 ft_lstdelone_bonus.c ft_lstiter_bonus.c ft_lstclear_bonus.c \
-ft_lstmap_bonus.c ft_swap_bonus.c ft_strsearch_bonus.c \
-ft_charsearch_bonus.c ft_counter_bonus.c
+ft_lstmap_bonus.c
 
-BONUS_OFILES = $(OFILES) $(BONUS_SRC:.c=.o)
+EXTRA_SRC = $(BONUS_SRC) ft_swap_bonus.c ft_strsearch_bonus.c \
+ft_charsearch_bonus.c ft_counter_bonus.c ft_intlen_bonus.c \
+ft_wordcount_bonus.c
+
+BONUS_OFILES = $(OFILES) $(EXTRA_SRC:.c=.o)
 
 INCLUDES = libft.h
 
@@ -44,7 +47,7 @@ $(NAME): $(OFILES) $(INCLUDES)
 	@ar rcs $(NAME) $?
 	@echo "$(GREEN)[libft] - Created a Library and Object Files.$(NOCOLOR)"
 
-bonus: $(NAME) $(BONUS_OFILES) $(BONUS_SRC)
+bonus: $(NAME) $(BONUS_OFILES) $(EXTRA_SRC)
 	@touch bonus
 	@ar rcs $(NAME) $?
 
