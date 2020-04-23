@@ -6,17 +6,11 @@
 /*   By: bdekonin <bdekonin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/01 12:35:53 by bdekonin      #+#    #+#                 */
-/*   Updated: 2020/04/10 20:47:39 by bdekonin      ########   odam.nl         */
+/*   Updated: 2020/04/23 12:47:23 by bdekonin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-** it checks while they are equal and not at the null terminator.
-** also while i is smaller then n (n is the length given through)
-** and - 1 for the end line character.
-*/
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
