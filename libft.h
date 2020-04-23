@@ -6,7 +6,7 @@
 /*   By: bdekonin <bdekonin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/05 08:07:31 by bdekonin      #+#    #+#                 */
-/*   Updated: 2020/04/23 11:55:52 by bdekonin      ########   odam.nl         */
+/*   Updated: 2020/04/23 13:00:44 by bdekonin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void				*ft_memmove(void *dst, const void *src, size_t len);
 ** File Descriptor Functions
 */
 int					ft_putchar_fd(char c, int fd);
-void				ft_putendl_fd(char *s, int fd);
+int					ft_putendl_fd(char *s, int fd);
 int					ft_putstr_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 
