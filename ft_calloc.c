@@ -6,7 +6,7 @@
 /*   By: bdekonin <bdekonin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/05 09:01:26 by bdekonin      #+#    #+#                 */
-/*   Updated: 2020/04/10 20:44:32 by bdekonin      ########   odam.nl         */
+/*   Updated: 2020/04/23 10:33:16 by bdekonin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ void	*ft_calloc(size_t count, size_t size)
 	char	*str;
 
 	i = 0;
-	str = (char*)malloc(sizeof(char) * (count * size));
-	if (str == NULL)
-		return (0);
+	str = malloc(sizeof(char) * (count * size));
+	if (!str)
+		return (NULL);
 	else
 	{
 		while (i != (count * size))
