@@ -6,7 +6,7 @@
 /*   By: bdekonin <bdekonin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/07 11:09:27 by bdekonin      #+#    #+#                 */
-/*   Updated: 2020/04/10 20:47:20 by bdekonin      ########   odam.nl         */
+/*   Updated: 2020/04/23 12:41:38 by bdekonin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,21 +21,19 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	j = 0;
 	if (!s1 || !s2)
-		return (0);
-	str = malloc(sizeof(char) * (ft_strlen(s1) + \
-	ft_strlen(s2) + 1));
-	if (str == NULL)
-		return (0);
-	while ((char)s1[i] != '\0')
+		return (NULL);
+	str = ft_calloc((ft_strlen(s1) + ft_strlen(s2) + 1), sizeof(char));
+	if (!str)
+		return (NULL);
+	while (s1[i] != '\0')
 	{
-		str[i] = (char)s1[i];
+		str[i] = s1[i];
 		i++;
 	}
-	while ((char)s2[j] != '\0')
+	while (s2[j] != '\0')
 	{
-		str[i + j] = (char)s2[j];
+		str[i + j] = s2[j];
 		j++;
 	}
-	str[i + j] = '\0';
 	return (str);
 }
