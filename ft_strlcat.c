@@ -6,20 +6,11 @@
 /*   By: bdekonin <bdekonin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/08 16:02:37 by bdekonin      #+#    #+#                 */
-/*   Updated: 2020/04/10 20:47:24 by bdekonin      ########   odam.nl         */
+/*   Updated: 2020/04/23 12:43:16 by bdekonin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-** i is set to the length of dst so it will continue from there on.
-** it will copy src to dst from the index on. (so at the end)
-** it will put an null terminator at the end of the new string.
-** then j will count the total length of src.
-** if dstsize smaller is then i, then it cannot return the total length of dst.
-** and also adds J because thats how many times it has been copied over.
-*/
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
