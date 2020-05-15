@@ -6,7 +6,7 @@
 /*   By: bdekonin <bdekonin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/18 14:32:07 by bdekonin      #+#    #+#                 */
-/*   Updated: 2020/04/10 20:45:59 by bdekonin      ########   odam.nl         */
+/*   Updated: 2020/05/15 21:42:28 by bdekonin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int count;
+	int i;
 
-	count = 0;
+	i = 0;
 	while (lst)
 	{
 		lst = lst->next;
-		count++;
+		i++;
 	}
-	return (count);
+	return (i);
 }

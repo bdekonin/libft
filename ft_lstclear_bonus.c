@@ -6,7 +6,7 @@
 /*   By: bdekonin <bdekonin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/27 15:25:54 by bdekonin      #+#    #+#                 */
-/*   Updated: 2020/04/10 20:45:32 by bdekonin      ########   odam.nl         */
+/*   Updated: 2020/05/15 22:07:04 by bdekonin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,16 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list *list;
-	t_list *tmp;
+	t_list		*tmp;
 
-	list = *lst;
-	while (list)
-	{
-		ft_lstdelone(list, del);
-		tmp = list->next;
-		list = tmp;
-	}
+	if (!lst)
+		return ;
+	if (del)
+		while (*lst)
+		{
+			tmp = (*lst)->next;
+			ft_lstdelone(*lst, del);
+			*lst = tmp;
+		}
 	*lst = NULL;
 }

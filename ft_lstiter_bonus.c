@@ -6,7 +6,7 @@
 /*   By: bdekonin <bdekonin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/27 15:09:09 by bdekonin      #+#    #+#                 */
-/*   Updated: 2020/04/10 20:45:40 by bdekonin      ########   odam.nl         */
+/*   Updated: 2020/05/15 22:06:18 by bdekonin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (!lst)
+	if (!f)
 		return ;
 	while (lst)
 	{
