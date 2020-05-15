@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_intlen_bonus.c                                  :+:    :+:            */
+/*   ft_abs_bonus.c                                     :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: bdekonin <bdekonin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/04/23 10:44:09 by bdekonin      #+#    #+#                 */
-/*   Updated: 2020/05/15 22:41:54 by bdekonin      ########   odam.nl         */
+/*   Created: 2020/05/15 22:42:30 by bdekonin      #+#    #+#                 */
+/*   Updated: 2020/05/15 22:43:20 by bdekonin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int		ft_intlen(long long n, int base)
+int	ft_abs(int x)
 {
-	int count;
-
-	count = 1;
-	if (n < 0)
-		count++;
-	while (n != 0)
-	{
-		n /= base;
-		count++;
-	}
-	return (count);
+	if (x < 0)
+		x *= -1;
+	return (x);
 }
