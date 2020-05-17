@@ -6,7 +6,7 @@
 /*   By: bdekonin <bdekonin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/14 14:14:53 by bdekonin      #+#    #+#                 */
-/*   Updated: 2020/04/26 21:53:10 by bdekonin      ########   odam.nl         */
+/*   Updated: 2020/05/15 22:47:11 by bdekonin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char			*ft_itoa(int n)
 	char	*str;
 	int		count;
 
-	count = ft_intlen(n);
+	count = ft_intlen(n, 10);
 	str = ft_calloc(count, sizeof(char));
 	if (!str)
 		return (NULL);

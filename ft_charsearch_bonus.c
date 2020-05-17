@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_abs_bonus.c                                     :+:    :+:            */
+/*   ft_charsearch_bonus.c                              :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: bdekonin <bdekonin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/05/15 22:42:30 by bdekonin      #+#    #+#                 */
-/*   Updated: 2020/05/16 23:38:34 by bdekonin      ########   odam.nl         */
+/*   Created: 2020/05/16 23:43:02 by bdekonin      #+#    #+#                 */
+/*   Updated: 2020/05/16 23:44:39 by bdekonin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_abs(int x)
+int		ft_charsearch(char *str, int c)
 {
-	if (x < 0)
-		x *= -1;
-	return (x);
+	int i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] == c)
+			return (i);
+		i++;
+	}
+	return (0);
 }

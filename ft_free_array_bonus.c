@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_abs_bonus.c                                     :+:    :+:            */
+/*   ft_free_array.c                                    :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: bdekonin <bdekonin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/05/15 22:42:30 by bdekonin      #+#    #+#                 */
-/*   Updated: 2020/05/16 23:38:34 by bdekonin      ########   odam.nl         */
+/*   Created: 2020/05/16 23:38:48 by bdekonin      #+#    #+#                 */
+/*   Updated: 2020/05/16 23:39:06 by bdekonin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_abs(int x)
+void	ft_free_array(void **ptr, int size)
 {
-	if (x < 0)
-		x *= -1;
-	return (x);
+	while (size > 0)
+	{
+		size--;
+		free(ptr[size]);
+	}
+	free(ptr);
 }
