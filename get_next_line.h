@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_intlen_bonus.c                                  :+:    :+:            */
+/*   get_next_line.h                                    :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: bdekonin <bdekonin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/04/23 10:44:09 by bdekonin      #+#    #+#                 */
-/*   Updated: 2020/06/06 13:57:41 by bdekonin      ########   odam.nl         */
+/*   Created: 2019/11/05 08:07:31 by bdekonin      #+#    #+#                 */
+/*   Updated: 2020/04/12 14:18:00 by bdekonin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-int		ft_intlen(long long n, int base)
-{
-	int count;
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 128
+# endif
 
-	count = 1;
-	if (n < 0)
-		count++;
-	while (n != 0)
-	{
-		n /= base;
-		count++;
-	}
-	return (count);
-}
+# include <unistd.h>
+# include <limits.h>
+# include <stdlib.h>
+
+int		get_next_line(int fd, char **line);
+
+#endif

@@ -6,7 +6,7 @@
 /*   By: bdekonin <bdekonin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/05 08:07:31 by bdekonin      #+#    #+#                 */
-/*   Updated: 2020/05/16 23:39:32 by bdekonin      ########   odam.nl         */
+/*   Updated: 2020/06/15 10:56:28 by bdekonin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include "get_next_line.h"
 
 typedef struct		s_list
 {
@@ -88,7 +89,7 @@ char				*ft_itoa(int n);
 int					ft_atoi(const char *str);
 
 /*
-** Bonus Functions
+** Project Bonus Functions
 */
 t_list				*ft_lstnew(void *content);
 void				ft_lstadd_front(t_list **alst, t_list *new);
@@ -102,15 +103,24 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *), \
 void (*del)(void *));
 
 /*
-** Extra Functions
+** Other Projects
+*/
+
+int					get_next_line(int fd, char **line);
+
+/*
+** Extra Bonus Functions
 */
 int					ft_counter(const char *s, char c);
-void				ft_swap(double *xp, double *yp);
 int					ft_strsearch(char *line, char *str);
 int					ft_charsearch(char *str, int c);
 int					ft_intlen(long long n, int base);
 int					ft_wordcount(char *str);
 int					ft_abs(int x);
+char				*ft_strcat(char *dst, const char *src);
 void				ft_free_array(void **ptr, int size);
+void				ft_swap(double *xp, double *yp);
+void				ft_str_tolower(char *str);
+char				**ft_calloc_2d(size_t width, size_t height);
 
 #endif
