@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_free_array_bonus.c                              :+:    :+:            */
+/*   ft_iserrno_bonus.c                                 :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: bdekonin <bdekonin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/05/16 23:38:48 by bdekonin      #+#    #+#                 */
-/*   Updated: 2020/07/14 21:43:08 by bdekonin      ########   odam.nl         */
+/*   Created: 2020/07/09 16:12:20 by bdekonin      #+#    #+#                 */
+/*   Updated: 2020/07/14 21:42:18 by bdekonin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <errno.h>
 
-void	ft_free_array(void **ptr, int size)
+int		ft_iserrno(int error)
 {
-	while (size > 0)
-	{
-		size--;
-		free(ptr[size]);
-	}
-	free(ptr);
+	if (errno == error)
+		return (1);
+	else
+		return (0);
 }

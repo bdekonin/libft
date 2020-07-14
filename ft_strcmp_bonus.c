@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_calloc_2d_bonus.c                               :+:    :+:            */
+/*   ft_strcmp.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: bdekonin <bdekonin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/06/12 17:53:13 by bdekonin      #+#    #+#                 */
-/*   Updated: 2020/06/15 10:56:09 by bdekonin      ########   odam.nl         */
+/*   Created: 2020/06/24 14:25:47 by bdekonin      #+#    #+#                 */
+/*   Updated: 2020/06/25 15:18:05 by bdekonin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		**ft_calloc_2d(size_t width, size_t height)
+int		ft_strcmp(const char *s1, const char *s2)
 {
-	char		**array;
-	size_t		i;
+	size_t			i;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
+	str1 = (unsigned char*)s1;
+	str2 = (unsigned char*)s2;
 	i = 0;
-	array = ft_calloc(height + 1, sizeof(char*));
-	if (!array)
-		return (NULL);
-	while (i < height)
-	{
-		array[i] = ft_calloc(width, sizeof(char));
-		if (!array[i])
-		{
-			ft_free_array((void*)array, i - 1);
-			return (NULL);
-		}
+	while (str1[i] == str2[i] && str1[i] && str2[i])
 		i++;
-	}
-	return (array);
+	return (str1[i] - str2[i]);
 }

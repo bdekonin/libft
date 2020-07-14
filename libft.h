@@ -6,7 +6,7 @@
 /*   By: bdekonin <bdekonin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/05 08:07:31 by bdekonin      #+#    #+#                 */
-/*   Updated: 2020/06/15 10:56:28 by bdekonin      ########   odam.nl         */
+/*   Updated: 2020/07/10 12:32:24 by bdekonin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,14 +106,14 @@ void (*del)(void *));
 ** Other Projects
 */
 
-int					get_next_line(int fd, char **line);
-
 /*
 ** Extra Bonus Functions
 */
 int					ft_counter(const char *s, char c);
 int					ft_strsearch(char *line, char *str);
-int					ft_charsearch(char *str, int c);
+int					ft_strsearch_bool(char *line, char *str);
+int					ft_charsearch(char *str, char c);
+int					ft_charsearch_bool(char *str, char c);
 int					ft_intlen(long long n, int base);
 int					ft_wordcount(char *str);
 int					ft_abs(int x);
@@ -122,5 +122,9 @@ void				ft_free_array(void **ptr, int size);
 void				ft_swap(double *xp, double *yp);
 void				ft_str_tolower(char *str);
 char				**ft_calloc_2d(size_t width, size_t height);
+char				**ft_split_sep(const char *src, char *sep, size_t *size);
+int					ft_strcmp(const char *s1, const char *s2);
+int					ft_iserrno(int error);
+int					ft_getline(int fd, char **line);
 
 #endif
