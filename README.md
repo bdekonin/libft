@@ -1,4 +1,6 @@
-# C Standard Library Tutorial
+# libft
+
+[![CodeFactor](https://www.codefactor.io/repository/github/bdekonin/libft/badge)](https://www.codefactor.io/repository/github/bdekonin/libft)
 
 This repository contains a small library similar to the C Standard Library, created to help learn the basics of C programming language. The library covers a variety of topics such as memory management, string manipulation, and more.
 
