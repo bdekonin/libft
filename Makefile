@@ -6,7 +6,7 @@
 #    By: bdekonin <bdekonin@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2019/10/29 12:24:22 by bdekonin      #+#    #+#                  #
-#    Updated: 2020/07/15 14:29:45 by bdekonin      ########   odam.nl          #
+#    Updated: 2023/01/14 19:09:53 by bdekonin      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ ft_strtrim.c \
 ft_lstadd_back_bonus.c ft_lstadd_front_bonus.c \
 ft_lstlast_bonus.c ft_lstnew_bonus.c ft_lstsize_bonus.c \
 ft_lstdelone_bonus.c ft_lstiter_bonus.c ft_lstclear_bonus.c \
-ft_lstmap_bonus.c
+ft_lstmap_bonus.c ft_lfind.c
 
 OFILES = $(SRCS:.c=.o)
 
