@@ -6,7 +6,7 @@
 /*   By: bdekonin <bdekonin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/05 08:07:31 by bdekonin      #+#    #+#                 */
-/*   Updated: 2020/07/15 20:05:07 by bdekonin      ########   odam.nl         */
+/*   Updated: 2023/01/15 13:39:13 by bdekonin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,5 +126,7 @@ int					ft_strcmp(const char *s1, const char *s2);
 int					ft_iserrno(int error);
 int					ft_getline(int fd, char **line);
 int					ft_strexpand(char **str, size_t size);
+void				*ft_lfind(const void *key, const void *base, size_t nmemb, size_t size, int (*compar)(const void *, const void *));
+int					ft_lfind_index(const void *key, const void *base, size_t nel, size_t width, int (*compar)(const void *, const void *));
 
 #endif

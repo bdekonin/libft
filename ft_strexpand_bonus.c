@@ -6,7 +6,7 @@
 /*   By: bdekonin <bdekonin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/07/15 14:13:39 by bdekonin      #+#    #+#                 */
-/*   Updated: 2020/07/15 14:28:43 by bdekonin      ########   odam.nl         */
+/*   Updated: 2023/01/14 19:17:31 by bdekonin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ int		ft_strexpand(char **str, size_t size)
 
 	if (size == 0)
 		return (0);
-	if (size < 0)
-		return (-1);
+	// if (size < 0)
+	// 	return (-1);
 	stringlength = ft_strlen(*str);
 	temp = ft_calloc(stringlength + size, sizeof(char));
 	if (!temp)
